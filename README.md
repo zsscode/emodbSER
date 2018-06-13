@@ -11,6 +11,6 @@ This project aims to realize Speech Emotion Recognition task on speech dataset o
 
 ## Usage
 1. Download Berlin Database of Emotional Speech from [here](http://www.emodb.bilderbar.info/download/) and rename the dataset folder as emodb.
-2. run `read_data.py` to generate `emodb.pkl`
+2. Run `read_data.py` to generate `emodb.pkl`
 3. Modify the neural network architecture and hyperparameters in `keras_cnn.py` and `keras_cae.py`.
 4. Train and test the model by running commands `python keras_cnn.py` and `python keras_cae.py`
