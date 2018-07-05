@@ -118,6 +118,8 @@ def read_emodb(img_rows=512, img_cols=128):
             full_name = rootdir+name
             ims = plotstft(full_name)
             imgs = scipy.misc.imresize(np.uint8(ims), (img_rows, img_cols))
+            data[i, :] = imgs.flatten()
+            print(np.max(data))
 
             if filename[5] == 'W':  # anger
                 name2 = targetdir+'anger/'+name[:7] + ".jpg"
@@ -159,5 +161,5 @@ def read_emodb(img_rows=512, img_cols=128):
                   label_A, label_F, label_T, label_N), f)
     f.close()
 
-
-read_emodb()
+if __name__== "__main__":
+    read_emodb()

@@ -19,7 +19,6 @@ def load_data():
     data, label, label_W, label_L, label_E, label_A, label_F, label_T, label_N = cPickle.load(
         f)
 
-    print(data.shape)
     feature_length = data.shape[1]
     X_train = np.empty((464, feature_length))
     Y_train = np.empty(464, dtype=int)
